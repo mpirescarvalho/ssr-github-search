@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "preserve": "next build",
+    "serve": "next start"
   },
   "dependencies": {
     "next": "9.5.3",

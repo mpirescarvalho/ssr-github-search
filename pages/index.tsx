@@ -51,10 +51,12 @@ const ResultList = styled.div`
   overflow-y: scroll;
 `;
 
-const ResultItem = styled.div`
+const ResultItem = styled.a`
   padding: 12px 20px;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.2s;
+  color: #fff;
 
   span {
     font-weight: bold;
@@ -135,7 +137,7 @@ export default function Home() {
       <ResultList>
         {repos && repos.length > 0 ? (
           repos.map((repo, index) => (
-            <Link key={index} href={`/${repo.full_name}`}>
+            <Link key={index} href={`/${repo.full_name}`} passHref>
               <ResultItem>
                 <span>{repo.name}</span>
                 <p>{repo.description}</p>
